@@ -24,6 +24,8 @@ function login(username, password) {
                 error => {
                     dispatch(failure(error.toString()));
                     dispatch(alertActions.error(error.toString()));
+                    dispatch(alertActions.error('نام کاربری یا کلمه عبور اشتباه است'));
+
                 }
             );
     };

@@ -8,8 +8,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { history } from '../_helpers';
 import { alertActions } from '../_actions';
 import { PrivateRoute } from '../_components';
-import { HomePage } from '../HomePage';
 import { LoginPage } from '../LoginPage';
+import { Dashboard } from '../Dashboard';
+import { PaymentPage } from '../PaymentPage';
 import { RegisterPage } from '../RegisterPage';
 function App() {
     const alert = useSelector(state => state.alert);
@@ -29,8 +30,9 @@ function App() {
                         <div className={`alert ${alert.type}`}>{alert.message}</div>
                     }
                     <Router history={history}>
-                        <Switch>
-                            <PrivateRoute exact path="/" component={HomePage} />
+                        <Switch>                            
+                            <PrivateRoute exact path="/" component={Dashboard}/>
+                            <PrivateRoute exact path="/payment" component={PaymentPage}/>
                             <Route path="/login" component={LoginPage} />
                             <Route path="/register" component={RegisterPage} />
                             <Redirect from="*" to="/" />

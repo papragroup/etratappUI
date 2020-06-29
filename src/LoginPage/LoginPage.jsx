@@ -13,6 +13,7 @@ function LoginPage() {
     const { username, password } = inputs;
     const loggingIn = useSelector(state => state.authentication.loggingIn);
     const dispatch = useDispatch();
+    
 
     // reset login status
     useEffect(() => { 
@@ -32,6 +33,7 @@ function LoginPage() {
             dispatch(userActions.login(username, password));
         }
     }
+    
 
 
     return (
@@ -61,9 +63,7 @@ function LoginPage() {
                         {loggingIn && <span className="spinner-border spinner-border-sm mr-1"></span>}
                         ورود
                     </button>
-                    <Link to="/register" className="btn btn-link">ثبت نام</Link>
-                    
-                    
+                                        
                 </div>
             </form>
            
