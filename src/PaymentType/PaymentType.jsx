@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { userActions } from '../_actions';
 
-function Dashboard () {
+function PaymentType () {
 
        // const users = useSelector(state => state.users);
     // const user = useSelector(state => state.authentication.user);
@@ -23,20 +23,30 @@ function Dashboard () {
                   
                    
                     <div className="pt-5">
-                        <Link to="/paymenttype">
-                            <img src="/public/assets/images/main/1.png" alt="" width="100%"/>
+        
+                        <Link to="/payment">
+                            <img src="/public/assets/images/main/2.png" alt="" width="100%"/>
                             </Link>
                       
                     </div>
                     <div>
-                
         
-                    <img src="/public/assets/images/main/5.png" alt="" width="100%"/>
+                    <Link to="/payment">
+                            <img src="/public/assets/images/main/3.png" alt="" width="100%"/>
+                            </Link>
+        
+                      
+                   </div>
+                   <div>
+
+                    <Link to="/payment">
+                            <img src="/public/assets/images/main/4.png" alt="" width="100%"/>
+                            </Link>
         
                       
                    </div>
                    <p>
-                        <Link to="/login">خروج</Link>
+                        <Link to="/">بازگشت</Link>
                     </p>
         
                 </div>
@@ -44,4 +54,4 @@ function Dashboard () {
             );
         }
 
-export { Dashboard };
+export { PaymentType };

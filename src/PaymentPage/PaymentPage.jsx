@@ -74,7 +74,7 @@ function PaymentPage() {
                     </button>
 
                 </div>
-                <Link to="/">بازگشت</Link>
+                <Link to="/paymenttype">بازگشت</Link>
 
             </form>
 

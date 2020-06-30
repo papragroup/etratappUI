@@ -12,6 +12,7 @@ import { LoginPage } from '../LoginPage';
 import { Dashboard } from '../Dashboard';
 import { PaymentPage } from '../PaymentPage';
 import { RegisterPage } from '../RegisterPage';
+import { PaymentType} from '../PaymentType';
 function App() {
     const alert = useSelector(state => state.alert);
     const dispatch = useDispatch();
@@ -32,6 +33,7 @@ function App() {
                     <Router history={history}>
                         <Switch>                            
                             <PrivateRoute exact path="/" component={Dashboard}/>
+                            <PrivateRoute exact path="/paymenttype" component={PaymentType}/>
                             <PrivateRoute exact path="/payment" component={PaymentPage}/>
                             <Route path="/login" component={LoginPage} />
                             <Route path="/register" component={RegisterPage} />
